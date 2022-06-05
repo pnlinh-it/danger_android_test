@@ -6,6 +6,14 @@ lane :build do
     dangerfile: "Dangerfile.common",
     pr: 'https://github.com/pnlinh-it/danger_android_test/pull/1'
   )
+
+  danger(
+    github_api_token: ENV["DANGER_GITHUB_API_TOKEN"],
+    verbose: true,
+    danger_id: "sourcecheck",
+    dangerfile: "Dangerfile.sourcecheck",
+    pr: 'https://github.com/pnlinh-it/danger_android_test/pull/1'
+  )
   debug
   # gradle(task: "lint")
   # gradle(task: "app:ktlintMainSourceSetCheck")
