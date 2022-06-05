@@ -11,6 +11,7 @@ ktlint.skip_lint = true
 ktlint.report_file = 'app/generate/ktlint/ktlintMainSourceSetCheck.json'
 ktlint.lint # Note the this line must run below the configuration
 
+puts Dir.pwd
 checkstyle_format.base_path = Dir.pwd
 checkstyle_format.report 'app/generate/ktlint/ktlintMainSourceSetCheck.xml'
 
