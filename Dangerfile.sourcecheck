@@ -1,8 +1,8 @@
 # android_lint.gradle_task = "lintMyFlavorDebug"
 # android_lint.severity = "Error"
 android_lint.skip_gradle_task = true
-android_lint.lint(inline_mode: true)
-android_lint.filtering = true # Only check changed file
+#android_lint.lint(inline_mode: true)
+#android_lint.filtering = true # Only check changed file
 android_lint.report_file = "app/generate/lint/lint-results.xml"
 android_lint.lint # Note the this line must run below the configuration
 
