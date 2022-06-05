@@ -1,0 +1,30 @@
+repositories {
+    mavenCentral()
+}
+
+configurations {
+    ktlint
+}
+
+dependencies {
+    ktlint 'com.pinterest:ktlint:0.45.2'
+}
+
+task ktlintWithoutPlugin(type: JavaExec, group: "verification") {
+    description = "Check Kotlin code style."
+    classpath = configurations.ktlint
+    main = "com.pinterest.ktlint.Main"
+    // Use for danger-ktlint
+    // args "src/**/*.kt", "--reporter=json,output=${buildDir}/ktlint.json"
+
+    // Use for danger-checkstyle_format
+    args "--experimental",
+            "src/**/*.kt",
+            "--baseline=ktlint-baseline.xml",
+            "--reporter=checkstyle,output=${buildDir}/ktlint.xml",
+            "--reporter=json,output=${buildDir}/ktlint.json"
+    // to generate report in checkstyle format prepend following args:
+    // "--reporter=plain", "--reporter=checkstyle,output=${buildDir}/ktlint.xml"
+    // see https://github.com/pinterest/ktlint#usage for more
+}
+// check.dependsOn ktlint
