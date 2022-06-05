@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="4.3">
+    <file name="src/main/java/com/pnlinh/android/danger_test/MainActivity.kt">
+        <error line="19" column="5" severity="warning" message="property `appBarConfiguration` should be declared before companion object." source="detekt.ClassOrdering" />
+        <error line="20" column="5" severity="warning" message="property `binding` should be declared before companion object." source="detekt.ClassOrdering" />
+        <error line="22" column="5" severity="warning" message="method `onCreate()` should be declared before companion object." source="detekt.ClassOrdering" />
+        <error line="40" column="5" severity="warning" message="method `onCreateOptionsMenu()` should be declared before companion object." source="detekt.ClassOrdering" />
+        <error line="46" column="5" severity="warning" message="method `onOptionsItemSelected()` should be declared before companion object." source="detekt.ClassOrdering" />
+        <error line="56" column="5" severity="warning" message="method `onSupportNavigateUp()` should be declared before companion object." source="detekt.ClassOrdering" />
+    </file>
+</checkstyle>

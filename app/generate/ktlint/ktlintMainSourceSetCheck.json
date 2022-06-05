@@ -1,0 +1,89 @@
+[
+    {
+        "file": "/Users/pnlinh/Desktop/Dev/Android/danger_android_test/app/src/main/java/com/pnlinh/android/danger_test/FirstFragment.kt",
+        "errors": [
+            {
+                "line": 1,
+                "column": 1,
+                "message": "Package name must not contain underscore",
+                "rule": "experimental:package-name"
+            },
+            {
+                "line": 3,
+                "column": 1,
+                "message": "Imports must be ordered in lexicographic order without any empty lines in-between",
+                "rule": "import-ordering"
+            },
+            {
+                "line": 23,
+                "column": 35,
+                "message": "Parameter should be on a separate line (unless all parameters can fit a single line)",
+                "rule": "parameter-list-wrapping"
+            },
+            {
+                "line": 26,
+                "column": 1,
+                "message": "First line in a method block should not be empty",
+                "rule": "experimental:no-empty-first-line-in-method-block"
+            }
+        ]
+    },
+    {
+        "file": "/Users/pnlinh/Desktop/Dev/Android/danger_android_test/app/src/main/java/com/pnlinh/android/danger_test/MainActivity.kt",
+        "errors": [
+            {
+                "line": 1,
+                "column": 1,
+                "message": "Package name must not contain underscore",
+                "rule": "experimental:package-name"
+            },
+            {
+                "line": 3,
+                "column": 1,
+                "message": "Imports must be ordered in lexicographic order without any empty lines in-between",
+                "rule": "import-ordering"
+            },
+            {
+                "line": 56,
+                "column": 1,
+                "message": "Unexpected indentation (16) (should be 12)",
+                "rule": "indent"
+            },
+            {
+                "line": 56,
+                "column": 17,
+                "message": "Line must not begin with \"||\"",
+                "rule": "chain-wrapping"
+            }
+        ]
+    },
+    {
+        "file": "/Users/pnlinh/Desktop/Dev/Android/danger_android_test/app/src/main/java/com/pnlinh/android/danger_test/SecondFragment.kt",
+        "errors": [
+            {
+                "line": 1,
+                "column": 1,
+                "message": "Package name must not contain underscore",
+                "rule": "experimental:package-name"
+            },
+            {
+                "line": 3,
+                "column": 1,
+                "message": "Imports must be ordered in lexicographic order without any empty lines in-between",
+                "rule": "import-ordering"
+            },
+            {
+                "line": 23,
+                "column": 35,
+                "message": "Parameter should be on a separate line (unless all parameters can fit a single line)",
+                "rule": "parameter-list-wrapping"
+            },
+            {
+                "line": 26,
+                "column": 1,
+                "message": "First line in a method block should not be empty",
+                "rule": "experimental:no-empty-first-line-in-method-block"
+            }
+        ]
+    }
+]

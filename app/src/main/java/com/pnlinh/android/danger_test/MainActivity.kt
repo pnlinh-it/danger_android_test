@@ -12,6 +12,9 @@ import android.view.MenuItem
 import com.pnlinh.android.danger_test.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+    companion object {
+        private val BUNDLE_NAME = "bundle_name"
+    }
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
