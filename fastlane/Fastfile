@@ -1,4 +1,8 @@
 lane :build do
+  gradle(task: "lint")
+  gradle(task: "app:ktlintMainSourceSetCheck")
+  gradle(task: "detekt")
+  gradle(task: "assembleDebug")
   danger(
     github_api_token: ENV["DANGER_GITHUB_API_TOKEN"],
     verbose: true,
@@ -6,7 +10,6 @@ lane :build do
     dangerfile: "Dangerfile.common",
     pr: 'https://github.com/pnlinh-it/danger_android_test/pull/1'
   )
-
   danger(
     github_api_token: ENV["DANGER_GITHUB_API_TOKEN"],
     verbose: true,
@@ -15,8 +18,4 @@ lane :build do
     pr: 'https://github.com/pnlinh-it/danger_android_test/pull/1'
   )
   debug
-  # gradle(task: "lint")
-  # gradle(task: "app:ktlintMainSourceSetCheck")
-  # gradle(task: "detekt")
-  # gradle(task: "assembleDebug")
 end
