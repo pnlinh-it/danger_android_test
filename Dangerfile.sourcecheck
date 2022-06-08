@@ -1,6 +1,7 @@
 # android_lint.gradle_task = "lintMyFlavorDebug"
 # android_lint.severity = "Error"
-#android_lint.filtering = true # Only check changed file
+# android_lint.filtering = true # Only check changed file
+# android_lint.report_file = "app/generate/lint/lint-results.xml"
 android_lint.report_file = "app/build/reports/lint/lint-results.xml"
 android_lint.skip_gradle_task = true
 # Note the this line must run below the configuration
@@ -8,12 +9,15 @@ android_lint.lint(inline_mode: true) #android_lint.lint
 
 # Only run in changed files
 ktlint.skip_lint = true
+# ktlint.report_file = 'app/generate/ktlint/ktlintMainSourceSetCheck.json'
 ktlint.report_file = 'app/build/reports/ktlint/ktlintMainSourceSetCheck.json'
 ktlint.lint # Note the this line must run below the configuration
 
 puts Dir.pwd
 checkstyle_format.base_path = Dir.pwd
+# checkstyle_format.report 'app/generate/ktlint/ktlintMainSourceSetCheck.xml'
 checkstyle_format.report 'app/build/reports/ktlint/ktlintMainSourceSetCheck.xml'
 
 checkstyle_format.base_path = Dir.pwd
+# checkstyle_format.report 'app/generate/detekt/detekt.xml'
 checkstyle_format.report 'app/build/reports/detekt/detekt.xml'
