@@ -18,4 +18,5 @@ lane :build do
     pr: 'https://github.com/pnlinh-it/danger_android_test/pull/1'
   )
   debug
+  upload_to_server
 end
