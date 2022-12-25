@@ -3,6 +3,11 @@ lane :build do
   gradle(task: "app:ktlintMainSourceSetCheck")
   gradle(task: "detekt")
   gradle(task: "assembleDebug")
+  gradle(task: "bundleRelease")
+  sign_bundle
+  build_apk_from_bundle
+  sign_apk
+
   danger(
     github_api_token: ENV["DANGER_GITHUB_API_TOKEN"],
     verbose: true,
